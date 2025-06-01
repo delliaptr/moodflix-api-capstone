@@ -15,11 +15,11 @@ module.exports = [
         payload: Joi.object({
           mood: Joi.string().valid(
             'cheerful', 'emotional', 'energetic', 'imaginative', 
-            'insightful', 'romantic', 'thrilling',
+            'insightful', 'romantic', 'thrilling', 'neutral',
             'Cheerful', 'Emotional', 'Energetic', 'Imaginative', 
-            'Insightful', 'Romantic', 'Thrilling',
+            'Insightful', 'Romantic', 'Thrilling', 'Neutral',
             'CHEERFUL', 'EMOTIONAL', 'ENERGETIC', 'IMAGINATIVE', 
-            'INSIGHTFUL', 'ROMANTIC', 'THRILLING'
+            'INSIGHTFUL', 'ROMANTIC', 'THRILLING', 'NEUTRAL'
           ).required(),
           top_k: Joi.number().integer().min(1).max(5).optional().default(5)
         })
